@@ -30,8 +30,8 @@ class StructMap(object):
                 value = getattr(self.p.contents, attr)
                 setattr(self, attr, convert23(value))
 
-    def __dict__(self):
-        return dict(iter(self))
+    ## def __dict__(self):
+    ##     return dict(iter(self))
 
     def __iter__(self):
         for attr in dir(self.p.contents):
